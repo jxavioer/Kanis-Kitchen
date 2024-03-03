@@ -10,3 +10,5 @@ Development Team - Bratt Morejon & G. Kacy Warkentien
 
 
 Kani's Kitchen WebApp
+
+-GitIgnore from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
