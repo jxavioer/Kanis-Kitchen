@@ -1,31 +1,53 @@
 import React, {useState} from 'react';
-
+import './style-sheet.css'
 const App = () => {
-  const [selectedItems, setSelectedItems] = useState({});
-  const menuItems = [
-    { id: 1, name: "Edamame", price: 2.00, catagory: 'Appeizier', Description: "" },
-    { id: 2, name: "Seaweed Salad", price: 2.50, catagory: 'Appeizier', Description: "" },
-    { id: 3, name: "Arizona Roll", price: 6.75, catagory: 'Sushi', Description: 'Yellow Tail, Scallion, and Smelt Roe' },
-    { id: 4, name: "Hawaiian Roll", price: 6.75, catagory: 'Sushi', Description: 'Shrimp Tempura, Spicy Tuna, and Spicy Mayo' },
-    { id: 5, name: "JB Roll", price: 6.75, catagory: 'Sushi', Description: 'Smoked Salmon, Cream Cheese, Sesame Seed'},
-    { id: 6, name: "Rick Roll", price: 19.87, catagory: 'Sushi', Description: 'Shrimp and Asparagus Tempura, Seared Filet Mignon, Green Onion, 1/2lb Cream Cheese'},
-    { id: 7, name: "Fried Cheesecake", price: 7.75, catagory: 'Dessert', Description: 'Tempura Cheesecake. Comes with Strawberry or Chocolate Sauce'},
-    { id: 8, name: "Fried Icecream", price: 6.75, catagory: 'Dessert', Description: 'Tempura Icecream. Comes with Strawberry or Chocolate Sauce'},
-    { id: 9, name: "Green Tea", price: 2.00, catagory: 'Drinks', Description: 'Iced or Hot'},
-    { id: 10, name: "Fountain Drink", price: 3.50, catagory: 'Drinks', Description: 'Only Dr. Pepper. Everything else is broken.'}
-  ];
+    return (
+  
+    <main>
+      <section class = "background">
+      <header class = "welcome">
+      <h2 class = 'title'>Welcome to Kani's Kitchen!</h2>
+      <h3 class = 'title'>Sushi and Kitchen</h3>
+      </header>
+      
+      <div class = 'menu'>
+        <h2 class = 'title'>Menu</h2>
+        <hr class = "bigHR"></hr>
 
-  return (
-    <div className = "App">
-      <h1> Menu </h1>
-      {menuItems.map((menuItems => (
-        <li key={menuItems.id}>
-          <h3>{menuItems.name}</h3>
-          <p>{menuItems.Description}</p>
-          <p>${menuItems.price.toFixed(2)}</p>
-        </li>
-      )))}
-    </div>
+        <h2>Appetizers</h2>
+        <hr class = "smallHR"></hr> 
+          <article class = 'item'><p class = "food">Edamame</p><p class = "price">2.00</p></article>
+          <article class = 'item'><p class = "food">Seaweed Salad</p><p class = "price">2.50</p></article>
+        <h2>Sushi</h2>
+        <hr class = "smallHR"></hr> 
+          <article class = 'item'><p class = "food">Arizona Roll</p><p class = "price">6.55</p></article>
+          <p class = "description">Yellow Tail, Scallion, and Smelt Roe</p>
+          <article class = 'item'><p class = "food">Hawaiian Roll</p><p class = "price">6.55</p></article>
+          <p class = "description">Shrimp Tempura, Spicy Tuna, and Spicy Mayo</p>
+          <article class = 'item'><p class = "food">JB Roll</p><p class = "price">6.75</p></article>
+          <p class = "description">Smoked Salmon, Cream Cheese, Sesame Seed</p>
+          <article class = 'item'><p class = "food">Rick Roll</p><p class = "price">19.87</p></article>
+          <p class = "description">Shrimp and Asparagus Tempura, Seared Filet Mignon, Green Onion, Cream Cheese</p>
+        
+        <h2>Dessert</h2>
+        <hr class = "smallHR"></hr> 
+          <article class = 'item'><p class = "food">Fried Icecream</p><p class = "price">7.85</p></article>
+          <article class = 'item'><p class = "food">Fried Cheesecake</p><p class = "price">6.85</p></article>
+        <h2>Drinks</h2>
+        <hr class = "smallHR"></hr> 
+          <article class = 'item'><p class = "food">Green Tea</p><p class = "price">2.85</p></article>
+          <p class = "description">Iced or Hot</p>
+          <article class = 'item'><p class = "food">Fountain Drink</p><p class = "price">3.00</p></article>
+          <p class = "description">Only Dr. Pepper. Everything else is broken.</p>
+      </div>
+      </section>
+      <footer>
+        <p class = "visit">Visit Kani's Kitchen</p>
+        <p class = "address">1234 Univeristy Ave.</p>
+        <p class = "phonenumber">727-555-2000</p>
+      </footer>
+      
+    </main>
   );
 };
 

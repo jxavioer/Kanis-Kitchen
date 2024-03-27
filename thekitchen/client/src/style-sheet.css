@@ -1,0 +1,86 @@
+
+.item p{
+    display:inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.food{
+    text-align: left;
+    width:75%;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.title{
+    text-align: center;
+}
+.price{
+    text-align: right;
+    width: 20%;
+}
+.description{
+    margin-left: 30px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+h2{
+    margin-bottom: 3px;
+}
+.menu{
+    width: 70%;
+    background-color: rgb(250, 111, 118);
+    margin: auto;
+    padding: 10px;
+
+
+}
+.bigHR{
+    background-color:black;
+    border-color:black;
+    height: 2px;
+    
+}
+.smallHR{
+    background-color:black;
+    border-color:black;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    width: 100%;
+}
+.visit{
+    text-align: center;
+    margin-bottom: 3px;
+    font-size:15px;
+}
+.address{
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size:12px;
+}
+.phonenumber{
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    font-size:12px;
+}
+footer{
+
+}
+.welcome{
+    width: 40%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    padding: 3px;
+}
+
+.background{
+    background-image: url(https://c8.alamy.com/comp/G1GF8D/sushi-roll-raw-makki-fresh-food-seafood-susi-stock-image-G1GF8D.jpg);
+    padding-bottom: 45px;
+
+    font-family: Helvetica;
+
+}
