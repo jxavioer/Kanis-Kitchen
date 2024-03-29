@@ -11,6 +11,12 @@
     margin-left: 10px;
     font-weight: bold;
 }
+
+.food a{
+    color: black; 
+    text-decoration: none;
+}
+
 .title{
     text-align: center;
 }
@@ -84,3 +90,4 @@ footer{
     font-family: Helvetica;
 
 }
+
