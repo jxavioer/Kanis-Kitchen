@@ -5,7 +5,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import OffcanvasBody from "react-bootstrap/OffcanvasBody";
 import ShoppingCartList from "./ShoppingCartList";
 
-function ShoppingCart() {
+function ShoppingCart({cart}) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
