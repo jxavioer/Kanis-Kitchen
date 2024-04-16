@@ -1,8 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import ShoppingCart from "./ShoppingCart";
+import Button from "react-bootstrap/Button";
 import 'bootstrap/dist/css/bootstrap.css';
 import Kani from './kani.png';
 import Profile from './profile.png';
+import Cart from './cart.webp';
 
 function Header() {
     return (
@@ -16,11 +19,14 @@ function Header() {
                         alt="Kani's Kitchen Logo"/>
                     Kani's Kitchen
                 </Navbar.Brand>
-                <img
-                    src={Profile}
-                    width="50"
-                    height="50"
+                <div style={{display: "flex"}}>
+                    <ShoppingCart />
+                    <img
+                        src={Profile}
+                        width="50"
+                        height="50"
                     />
+                </div>
                 </Container>
         </Navbar>
     );
