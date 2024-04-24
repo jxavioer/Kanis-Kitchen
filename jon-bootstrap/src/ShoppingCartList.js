@@ -1,12 +1,20 @@
-import ListGroup from "react-bootstrap/ListGroup";
+import ListGroup from 'react-bootstrap/ListGroup';
+import './Menu'
+function ShoppingCartList({ cartItems }) {
+    // Check if cartItems is null
+    if (!cartItems) {
+        return <div>No items in cart</div>;
+    }
 
-function ShoppingCartList() {
+    // Render the list if cartItems is defined
     return (
         <ListGroup variant="flush">
-            <ListGroup.Item>Item 1</ListGroup.Item>
-            <ListGroup.Item>Item 2</ListGroup.Item>
+            {cartItems.map((item, index) => (
+                <ListGroup.Item key={index}>{item.name} - ${item.price}</ListGroup.Item>
+            ))}
         </ListGroup>
     );
 }
 
 export default ShoppingCartList;
+

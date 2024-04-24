@@ -4,27 +4,30 @@ import Cart from './cart.webp';
 import Offcanvas from "react-bootstrap/Offcanvas";
 import OffcanvasBody from "react-bootstrap/OffcanvasBody";
 import ShoppingCartList from "./ShoppingCartList";
+import Menu from './Menu'
 
-function ShoppingCart() {
+function ShoppingCart({ cartItems }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    return(
+
+    return (
         <>
             <Button style={{background: "transparent", border: "none"}} onClick={handleShow}>
                 <img src={Cart} style={{width:"4rem"}} />
-                </Button>
+            </Button>
 
-                <Offcanvas show={show} onHide={handleClose}>
-                    <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>Shopping Cart</Offcanvas.Title>
-                    </Offcanvas.Header>
-                    <OffcanvasBody>
-                        <ShoppingCartList />
-                    </OffcanvasBody>
-                </Offcanvas>
+            <Offcanvas show={show} onHide={handleClose}>
+                <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>Shopping Cart</Offcanvas.Title>
+                </Offcanvas.Header>
+                <OffcanvasBody>
+                    <ShoppingCartList cartItems={cartItems}/>
+
+                </OffcanvasBody>
+            </Offcanvas>
         </>
     );
 }

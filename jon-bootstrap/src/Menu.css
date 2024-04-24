@@ -4,3 +4,8 @@
     width: 5rem;
     height: 5rem;
 }
+.pink-button {
+    background-color: pink;
+    color: white; /* Optional: Change text color */
+    border-color: pink; /* Optional: Change border color */
+}

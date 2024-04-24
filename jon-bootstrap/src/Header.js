@@ -52,10 +52,10 @@ function Header() {
                     <div style={{ marginTop: '20px' }}>
                         <h3>About Us</h3>
                         <p>
-                            Welcome to Kani's Kitchen! We are passionate about providing delicious
-                            and healthy meals for you and your family. Our ingredients are sourced
-                            locally and our recipes are crafted with love. Enjoy your culinary
-                            journey with us!
+                            Welcome to Kani's Kitchen! Meet our team: Jonathan Xavioer, Kacy Warkentien,
+                            Sanika Kurahatti, and Bratt Morejon. Our mission is simple: we want to expedite
+                            the Sushi process for you!
+
                         </p>
                     </div>
                 )}
