@@ -15,9 +15,9 @@ function Menu() {
               defaultActiveKey="appetizers"
               id="menu-categories"
               className="mb-3">
-              <Tab eventKey="appetizers" title="Appetizers" style={{display: "flex", gap: "1rem"}}>
-                  <Card style={{width: '16rem', border: "2px solid black"}}>
-                      <Card.Img variant="Top" src={Edamame}/>
+              <Tab eventKey="appetizers" title="Appetizers">
+                  <Card style={{width: '16rem', border: "2px solid black", display: "inline-block"}}>
+                      <Card.Img src={Edamame}/>
                       <CardBody>
                           <div style={{display: "flex"}}>
                               <Container>
@@ -29,8 +29,8 @@ function Menu() {
                           </div>
                       </CardBody>
                   </Card>
-                  <Card style={{width: '16rem'}}>
-                      <Card.Img variant="Top" src={Edamame}/>
+                  <Card style={{width: '16rem', border: "2px solid black", display: "inline-block"}}>
+                      <Card.Img src={Edamame}/>
                       <CardBody>
                           <div style={{display: "flex"}}>
                               <Container>
@@ -44,42 +44,62 @@ function Menu() {
                   </Card>
               </Tab>
               <Tab eventKey="entrees" title="Entrees">
-                  <Card style={{width: '16rem'}}>
-                      <Card.Img variant="Top" src={Edamame}/>
+                  <Card style={{width: '16rem', border: "2px solid black"}}>
+                      <Card.Img src={Edamame}/>
                       <CardBody>
-                          <Card.Title>Steak Hibachi</Card.Title>
-                          <Card.Text>Steak Hibachi $100</Card.Text>
-                          <Button>BUY NOW</Button>
+                          <div style={{display: "flex"}}>
+                              <Container>
+                                  <Card.Title>Steak Hibachi</Card.Title>
+                                  <Card.Subtitle>$100</Card.Subtitle>
+                                  <Card.Text>Steak Hibachi</Card.Text>
+                              </Container>
+                              <Button className="buyButton">+</Button>
+                          </div>
                       </CardBody>
                   </Card>
               </Tab>
               <Tab eventKey="sushi" title="Sushi">
-                  <Card style={{width: '18rem'}}>
+                  <Card style={{width: '16rem', border: "2px solid black"}}>
                       <Card.Img variant="Top" src={Edamame}/>
                       <CardBody>
-                          <Card.Title>Rick Roll</Card.Title>
-                          <Card.Text>Rick Roll $100</Card.Text>
-                          <Button>BUY NOW</Button>
+                          <div style={{display: "flex"}}>
+                              <Container>
+                                  <Card.Title>Rick Roll</Card.Title>
+                                  <Card.Subtitle>$100</Card.Subtitle>
+                                  <Card.Text>Rick Roll</Card.Text>
+                              </Container>
+                              <Button className="buyButton">+</Button>
+                          </div>
                       </CardBody>
                   </Card>
               </Tab>
               <Tab eventKey="beverages" title="Beverages">
-                  <Card style={{width: '18rem'}}>
-                      <Card.Img variant="Top" src={Edamame}/>
+                  <Card style={{width: '16rem', border: "2px solid black"}}>
+                      <Card.Img src={Edamame}/>
                       <CardBody>
-                          <Card.Title>Boba</Card.Title>
-                          <Card.Text>Boba $100</Card.Text>
-                          <Button>BUY NOW</Button>
+                          <div style={{display: "flex"}}>
+                              <Container>
+                                  <Card.Title>Boba</Card.Title>
+                                  <Card.Subtitle>$100</Card.Subtitle>
+                                  <Card.Text>Boba</Card.Text>
+                              </Container>
+                              <Button className="buyButton">+</Button>
+                          </div>
                       </CardBody>
                   </Card>
               </Tab>
               <Tab eventKey="desserts" title="Desserts">
-                  <Card style={{width: '18rem'}}>
-                      <Card.Img variant="Top" src={Edamame}/>
+                  <Card style={{width: '16rem', border: "2px solid black"}}>
+                      <Card.Img src={Edamame}/>
                       <CardBody>
-                          <Card.Title>Mochi</Card.Title>
-                          <Card.Text>Mochi $100</Card.Text>
-                          <Button>BUY NOW</Button>
+                          <div style={{display: "flex"}}>
+                              <Container>
+                                  <Card.Title>Mochi</Card.Title>
+                                  <Card.Subtitle>$100</Card.Subtitle>
+                                  <Card.Text>Mochi</Card.Text>
+                              </Container>
+                              <Button className="buyButton">+</Button>
+                          </div>
                       </CardBody>
                   </Card>
               </Tab>

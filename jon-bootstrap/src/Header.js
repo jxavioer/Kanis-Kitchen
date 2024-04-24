@@ -7,12 +7,19 @@ import Kani from './kani.png';
 import Profile from './profile.png';
 import Cart from './cart.webp';
 import ProfilePic from "./profile_.js";
+import Login from './AuthLoginButton';
 import {useState} from "react";
+import AuthLoginButton from "./AuthLoginButton";
+import ProfileButton from "./ProfileButton";
+import LoginButton from "./AuthLoginButton";
+import {useAuth0} from "@auth0/auth0-react";
+import ProfileInfo from "./ProfileInfo";
 
 
 function Header() {
 
     const [showAbout, setShowAbout] = useState(false);
+    const { user, isAuthenticated, isLoading } = useAuth0();
 
     const toggleAbout = () => {
         setShowAbout(!showAbout);
@@ -41,7 +48,7 @@ function Header() {
                         //        width="50"
                         //        height="50"
                     />
-                    <ProfilePic />
+                    <ProfileButton isAuthenticated={user}/>
                     <Button variant="light" onClick={toggleAbout} style={{ marginLeft: '20px' }}>
                         About Us
                     </Button>
