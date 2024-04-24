@@ -1,0 +1,30 @@
+.background{
+  background-color: rgb(182, 62, 62);
+  align-items: right;
+}
+.log_buttons{
+
+  background-color: rgb(189, 160, 122);
+  
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+
+
+}
+.profile_pic{
+  scale: 40%;
+  margin-left: 85%;
+  margin-right:2px;
+  
+  
+}
+.email{
+  font-size: 15px;
+  margin-top: -40px;
+  margin-right: 2%;
+  float: right;
+  
+  
+  
+}
