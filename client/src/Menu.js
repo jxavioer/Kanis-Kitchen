@@ -1,14 +1,23 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import './Menu.css'
-import Container from "react-bootstrap/Container"
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
-import Edamame from './edamame.webp'
+import 'bootstrap/dist/css/bootstrap.css';
+import './Menu.css';
+import Container from "react-bootstrap/Container";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Edamame from './edamame.webp';
 import {CardBody} from "react-bootstrap";
 import {Tabs} from "react-bootstrap";
 import {Tab} from "react-bootstrap";
+import ShoppingCartList from "./ShoppingCartList";
+import {useState} from "react";
 
 function Menu() {
+
+    const [cartItems, setCartItems] = useState([]);
+
+    const addToCart = (item) => {
+        setCartItems([...cartItems, item]);
+    };
+
     return (
       <Container>
           <Tabs variant="underline"
@@ -25,7 +34,7 @@ function Menu() {
                                   <Card.Subtitle>$100</Card.Subtitle>
                                   <Card.Text>Edamame</Card.Text>
                               </Container>
-                              <Button className="buyButton">+</Button>
+                              <Button className="pink-button" onClick={() => addToCart({ name: "Edamame", price: 100 })}>Add to Cart</Button>
                           </div>
                       </CardBody>
                   </Card>
@@ -38,8 +47,7 @@ function Menu() {
                                   <Card.Subtitle>$101</Card.Subtitle>
                                   <Card.Text>Edamame 2</Card.Text>
                               </Container>
-                              <Button className="buyButton">+</Button>
-                          </div>
+                              <Button className="pink-button" onClick={() => addToCart({ name: "Edamame 2", price: 101 })}>Add to Cart</Button>                          </div>
                       </CardBody>
                   </Card>
               </Tab>
@@ -53,7 +61,9 @@ function Menu() {
                                   <Card.Subtitle>$100</Card.Subtitle>
                                   <Card.Text>Steak Hibachi</Card.Text>
                               </Container>
-                              <Button className="buyButton">+</Button>
+                              <Button className="pink-button"
+                                      onClick={() => addToCart({name: "Steak Hibachi", price: 100})}>Add to
+                                  Cart</Button>
                           </div>
                       </CardBody>
                   </Card>
@@ -68,7 +78,7 @@ function Menu() {
                                   <Card.Subtitle>$100</Card.Subtitle>
                                   <Card.Text>Rick Roll</Card.Text>
                               </Container>
-                              <Button className="buyButton">+</Button>
+                              <Button className="pink-button" onClick={() => addToCart({ name: "Rick Roll", price: 100 })}>Add to Cart</Button>
                           </div>
                       </CardBody>
                   </Card>
@@ -83,7 +93,7 @@ function Menu() {
                                   <Card.Subtitle>$100</Card.Subtitle>
                                   <Card.Text>Boba</Card.Text>
                               </Container>
-                              <Button className="buyButton">+</Button>
+                              <Button className="pink-button" onClick={() => addToCart({ name: "Boba", price: 100 })}>Add to Cart</Button>
                           </div>
                       </CardBody>
                   </Card>
@@ -98,12 +108,13 @@ function Menu() {
                                   <Card.Subtitle>$100</Card.Subtitle>
                                   <Card.Text>Mochi</Card.Text>
                               </Container>
-                              <Button className="buyButton">+</Button>
+                              <Button className="pink-button" onClick={() => addToCart({ name: "Mochi", price: 100 })}>Add to Cart</Button>
                           </div>
                       </CardBody>
                   </Card>
               </Tab>
           </Tabs>
+          <ShoppingCartList cartItems={cartItems}/>
       </Container>
     );
 }
